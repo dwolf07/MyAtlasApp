@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<color name="atlas_delimeter_gray">#18000000</color>
+	<color name="atlas_shape_avatar_gray">#14000000</color>
+	
+    <color name="atlas_bubble_blue">#21AAE1</color>
+    
+    <color name="atlas_text_blue">#21AAE1</color>
+    <color name="atlas_text_blue_bright">#FF2196F3</color>
+    <color name="atlas_text_gray">#86000000</color>
+    <color name="atlas_text_black">#FF000000</color>
+    <color name="atlas_text_black87">#DD000000</color>
+    <color name="atlas_text_white">#FFFFFFFF</color>
+    
+    <color name="atlas_background_white">#FFFFFFFF</color>
+    <color name="atlas_background_blue">#21AAE1</color>
+    <color name="atlas_background_blue_bright">#2196F3</color>
+    <color name="atlas_background_gray">#EBEBEB</color>
+    <color name="atlas_background_transparent">#00FFFFFF</color>
+
+    <color name="atlas_qr_mask">#80000000</color>
+    <color name="atlas_qr_laser">#FF2196F3</color>
+    <color name="atlas_qr_result">#FFFFFFFF</color>
+
+    <color name="atlas0_background">#F2F9FF</color>
+    <color name="atlas1_light">#B7DEFF</color>
+    <color name="atlas2_views">#D8EDFF</color>
+    <color name="atlas3_controls">#2296F4</color>
+    <color name="atlas4_dark">#EAEAEA</color>
+    
+    
+    <!-- proper way to declare colors  --> 
+    <color name="atlas_participant_picker_text_background">@color/atlas_background_white</color>
+    <color name="atlas_view_participant_picker_list_background">@color/atlas_background_white</color>
+    
+    <!-- menu item background -->
+    <color name="atlas_menu_item_background_gray">#EDEDED</color>
+    
+    
+</resources>

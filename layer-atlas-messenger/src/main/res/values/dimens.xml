@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="atlas_messenger_activity_horizontal_margin">16dp</dimen>
+    <dimen name="atlas_messenger_activity_vertical_margin">16dp</dimen>
+    
+</resources>

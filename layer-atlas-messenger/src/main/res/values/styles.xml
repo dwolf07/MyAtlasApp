@@ -1,0 +1,22 @@
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Apply default Atlas styles -->
+        <item name="AtlasConversationList">@style/AtlasConversationList</item>
+        <item name="AtlasMessageComposer">@style/AtlasMessageComposer</item>
+        <item name="AtlasMessageList">@style/AtlasMessageList</item>
+        <item name="AtlasParticipantPicker">@style/AtlasParticipantPicker</item>
+        <item name="AtlasTypingIndicator">@style/AtlasTypingIndicator</item>
+    </style>
+    
+    <!-- ActionBar styles -->
+    <style name="AtlasActionBarStyle"
+           parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/atlas_background_blue</item>
+    </style>
+    
+</resources>

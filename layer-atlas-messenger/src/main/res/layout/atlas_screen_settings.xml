@@ -1,0 +1,570 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.layer.atlas.messenger.AtlasSettingsScreen"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/atlas_background_white"
+    >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+            
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <include layout="@layout/atlas_actionbar_stub"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:textSize="@dimen/atlas_text_size_smaller"
+                android:textColor="@color/atlas_text_blue"
+                android:text="Account"/>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+                >
+                
+                <TextView
+                    android:id="@+id/atlas_settings_username_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/atlas_text_size_general"
+                    android:textColor="@color/atlas_text_black"
+                    android:text=""/>
+                
+                <TextView
+                    android:id="@+id/atlas_settings_login_status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textSize="@dimen/atlas_text_size_smaller"
+                    android:textColor="@color/atlas_text_gray"
+                    android:text=""/>
+                
+            </LinearLayout>
+            
+            <TextView
+                android:id="@+id/atlas_screen_settings_logout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:textSize="@dimen/atlas_text_size_general"
+                android:textColor="@color/atlas_text_black"
+                android:text="Log Out"/>
+            
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/atlas_background_gray"/>
+            
+            
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                <!--android:textColor="@color/atlas_text_blue"-->
+                <!--android:text="Notifications"/>-->
+            <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Send Push Notifications"/>-->
+                <!-- -->
+                <!--<CheckBox -->
+                    <!--android:id="@+id/atlas_settings_send_push_check"-->
+                    <!--android:layout_width="48dp"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:button="@drawable/atlas_ctl_switch"-->
+                    <!--/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Show Local Notifications"/>-->
+                <!-- -->
+                <!--<CheckBox -->
+                    <!--android:id="@+id/atlas_settings_show_local_check"-->
+                    <!--android:layout_width="48dp"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:button="@drawable/atlas_ctl_switch"-->
+                    <!--/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/atlas_background_gray"/>
+    
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                <!--android:textColor="@color/atlas_text_blue"-->
+                <!--android:text="Debug"/>-->
+            <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Debugging"/>-->
+                <!-- -->
+                <!--<CheckBox -->
+                    <!--android:id="@+id/atlas_settings_debugging_check"-->
+                    <!--android:layout_width="48dp"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:button="@drawable/atlas_ctl_switch"-->
+                    <!--/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Synchronization Interval"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_debug_sync_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="30 seconds"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+                >
+                 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/atlas_text_size_general"
+                    android:textColor="@color/atlas_text_black"
+                    android:text="Version"/>
+                 
+                <TextView
+                    android:id="@+id/atlas_settings_debug_version_app_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/atlas_text_size_smaller"
+                    android:textColor="@color/atlas_text_gray"
+                    android:text="LayerAtlas v0.1"/>
+                 
+                <TextView
+                    android:id="@+id/atlas_settings_debug_version_sdk_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textSize="@dimen/atlas_text_size_smaller"
+                    android:textColor="@color/atlas_text_gray"
+                    android:text="LayerSDK v0.13.3"/>
+                 
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+                >
+                 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/atlas_text_size_general"
+                    android:textColor="@color/atlas_text_black"
+                    android:text="LayerKit Version"/>
+                 
+                <TextView
+                    android:id="@+id/atlas_settings_debug_layersdk_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textSize="@dimen/atlas_text_size_smaller"
+                    android:textColor="@color/atlas_text_gray"
+                    android:text="LayerSDK v0.11.3"/>
+                 
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+                android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+                >
+                 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/atlas_text_size_general"
+                    android:textColor="@color/atlas_text_black"
+                    android:text="Build"/>
+                 
+                <TextView
+                    android:id="@+id/atlas_settings_debug_build1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/atlas_text_size_smaller"
+                    android:textColor="@color/atlas_text_gray"
+                    android:text="LayerAtlas v0.1"/>
+                 
+                <TextView
+                    android:id="@+id/atlas_settings_debug_build2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:textSize="@dimen/atlas_text_size_smaller"
+                    android:textColor="@color/atlas_text_gray"
+                    android:text="LayerSDK v0.13.3"/>
+                 
+            </LinearLayout>
+            
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Host"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_debug_host_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="conf.lyr8.net"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="User ID"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_debug_userid_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="c2129afd-f535-4c9f-ba92-4a2c67ff94c1"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="88dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Device Token"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_debug_device_token_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="15158hggc 98sdf98 98sf 7sd8f 89fsdf 8sdf98 sdf asdas kk787876djkj kjhkjasd"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+            <!--<View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/atlas_background_gray"/>-->
+            <!-- -->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                <!--android:textColor="@color/atlas_text_blue"-->
+                <!--android:text="Statistics"/>-->
+    <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Conversations"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_stat_conversations_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="0"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Messages"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_stat_messages_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="0"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Unread Messages"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_stat_unread_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="0"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            <!-- -->
+            <!--<View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/atlas_background_gray"/>-->
+            <!-- -->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                <!--android:textColor="@color/atlas_text_blue"-->
+                <!--android:text="External Content"/>-->
+    <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Current Disk Utilization"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_ext_disk_used_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="1.75 Mb"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            <!-- -->
+            <!--<LinearLayout -->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!--android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"-->
+                <!-->-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:textSize="@dimen/atlas_text_size_general"-->
+                    <!--android:textColor="@color/atlas_text_black"-->
+                    <!--android:text="Disk Capacity Allowance"/>-->
+                <!-- -->
+                <!--<TextView-->
+                    <!--android:id="@+id/atlas_settings_ext_limit_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="top"-->
+                    <!--android:textSize="@dimen/atlas_text_size_smaller"-->
+                    <!--android:textColor="@color/atlas_text_gray"-->
+                    <!--android:text="Unlimited"/>-->
+                <!-- -->
+            <!--</LinearLayout>-->
+            
+        </LinearLayout>
+    
+    </ScrollView>        
+    
+    <include layout="@layout/atlas_actionbar_layout"/>
+    
+</FrameLayout>
+

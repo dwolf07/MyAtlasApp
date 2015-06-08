@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.layer.atlas.messenger.AtlasSettingsScreen"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:textSize="@dimen/atlas_text_size_smaller"
+        android:textColor="@color/atlas_text_blue"
+        android:text="Options"/>
+    
+    
+    <EditText
+        android:id="@+id/atlas_screen_conversation_settings_groupname_text" 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="@dimen/atlas_text_size_general"
+        android:textColor="@color/atlas_text_black"
+        android:layout_marginLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:layout_marginRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        
+        android:hint="Group Name"
+        android:background="@drawable/atlas_ctl_edit_text"
+        />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/atlas_text_size_general"
+            android:textColor="@color/atlas_text_black"
+            android:text="Notifications"/>
+        
+        <CheckBox 
+            android:id="@+id/atlas_screen_conversation_settings_notifications_switch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:button="@drawable/atlas_ctl_switch"
+            android:checked="true"
+            />
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/atlas_screen_conversation_settings_block_person"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:textSize="@dimen/atlas_text_size_general"
+        android:textColor="@color/atlas_text_black"
+        android:text="Block this person"/>
+    
+    <TextView
+        android:id="@+id/atlas_screen_conversation_settings_leave_group"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:textSize="@dimen/atlas_text_size_general"
+        android:textColor="@color/atlas_text_black"
+        android:text="Leave this Group"/>
+    
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/atlas_background_gray"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:textSize="@dimen/atlas_text_size_smaller"
+        android:textColor="@color/atlas_text_blue"
+        android:text="Participants"/>
+    
+    <LinearLayout
+        android:id="@+id/atlas_screen_conversation_settings_participants_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        >
+        
+        <include layout="@layout/atlas_screen_conversation_settings_participant_convert"/>
+        <include layout="@layout/atlas_screen_conversation_settings_participant_convert"/>
+        <include layout="@layout/atlas_screen_conversation_settings_participant_convert"/>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/atlas_screen_conversation_settings_add_participant"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:textSize="@dimen/atlas_text_size_general"
+        android:textColor="@color/atlas_text_black"
+        android:text="Add People"/>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/atlas_background_gray"/>            
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:paddingRight="@dimen/atlas_messenger_activity_horizontal_margin"
+        android:textSize="@dimen/atlas_text_size_smaller"
+        android:textColor="@color/atlas_text_blue"
+        android:text="Attachments"/>
+    
+    <ImageView 
+        android:id="@+id/atlas_screen_conversation_settings_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        />
+    
+</LinearLayout>

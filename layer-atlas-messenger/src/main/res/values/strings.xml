@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Atlas Messenger</string>
+    <string name="atlas_screen_settings_title">Settings</string>
+    <string name="atlas_screen_messages_title">New Message</string>
+    <string name="atlas_screen_qr_prompt">Scan Layer Atlas QR Code</string>
+
+</resources>
